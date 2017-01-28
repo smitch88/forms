@@ -4,23 +4,22 @@
   :license {:name "MIT"}
 
   :min-lein-version "2.6.1"
-  
+
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.clojure/clojurescript "1.7.228"]
-                 [lein-doo "0.1.6"]
                  [reagent "0.6.0-rc"]
                  [org.clojure/core.async "0.2.374"
                   :exclusions [org.clojure/tools.reader]]]
-  
+
   :plugins [[lein-figwheel "0.5.2"]
-            [lein-doo "0.1.6"]
+            [lein-doo "0.1.7"]
             [lein-codox "0.9.3"]
             [lein-cljsbuild "1.1.3" :exclusions [[org.clojure/clojure]]]]
 
   :source-paths ["src"]
 
   :clean-targets ^{:protect false} ["resources/public/js/compiled" "target"]
-  
+
   :codox {:language :clojurescript
           :metadata {:doc/format :markdown}
           :namespaces [forms.core forms.dirty forms.validator]}
